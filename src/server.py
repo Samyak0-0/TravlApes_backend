@@ -5,12 +5,14 @@ import bcrypt
 from fastapi import FastAPI
 
 from src.routes import dummyroute
+from src.routes import destinationsRoute
 
 from .db import destinations, users
 from .models import DestinationCreate, UserCreate
 
 app = FastAPI(title="Travlapes Backend", version="1.0.0")
 app.include_router(dummyroute.router)
+app.include_router(destinationsRoute.router)
 
 
 @app.post("/users")
@@ -29,11 +31,11 @@ def create_user(user: UserCreate):
     return {"message": "User created"}
 
 
-@app.post("/destinations")
-def create_destination(dest: DestinationCreate):
-    destinations.insert_one({**dest.dict(), "created_at": datetime.utcnow()})
+# @app.post("/destinations")
+# def create_destination(dest: DestinationCreate):
+#     destinations.insert_one({**dest.dict(), "created_at": datetime.utcnow()})
 
-    return {"message": "Destination added"}
+#     return {"message": "Destination added"}
 
 
 @app.get("/")

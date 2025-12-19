@@ -10,9 +10,13 @@ class UserCreate(BaseModel):
 
 
 class DestinationCreate(BaseModel):
+    id: int
+    place: str | None = None
+    location: str | None = None
+    category: str
     name: str
-    country: str
-    difficulty: str
-    avg_cost: int
-    duration_days: int
-    tags: List[str]
+    hours: str
+    price: str
+    description: str
+    latitude: float | None = None
+    longitude: float | None = None
