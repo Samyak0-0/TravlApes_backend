@@ -1,5 +1,4 @@
 [
-  // Category: accomodations
   {
       "location": "Patan, Lalitpur",
       "name": "Hotel Himalaya",
@@ -71,7 +70,6 @@
       "category": "accomodations"
   },
 
-  // Category: heritage
   {
       "location": "Patan, Lalitpur",
       "name": "Ashokan Stupas (Lagankhel)",
@@ -101,7 +99,6 @@
       "category": "heritage"
   },
 
-  // Category: lakes
   {
       "location": "Patan, Lalitpur",
       "name": "Godavari Botanical Garden Pond",
@@ -159,7 +156,6 @@
       "category": "lakes"
   },
 
-  // Category: other
   {
       "location": "Patan, Lalitpur",
       "name": "Jawalakhel Street Food Area",
@@ -217,7 +213,6 @@
       "category": "other"
   },
 
-  // Category: park
   {
       "location": "Patan, Lalitpur",
       "name": "Jawalakhel Green Park",
@@ -275,7 +270,6 @@
       "category": "park"
   },
 
-  // Category: peaks
   {
       "location": "Patan, Lalitpur",
       "name": "Chapagaun Hill Trail",
@@ -333,7 +327,6 @@
       "category": "peaks"
   },
 
-  // Category: picnic_site
   {
       "location": "Patan, Lalitpur",
       "name": "Chapagaun Open Picnic Grounds",
@@ -391,7 +384,6 @@
       "category": "picnic_site"
   },
 
-  // Category: restaurant
   {
       "location": "Patan, Lalitpur",
       "name": "Cafe Timila",
@@ -533,7 +525,6 @@
       "category": "restaurant"
   },
 
-  // Category: rivers
   {
       "location": "Patan, Lalitpur",
       "name": "Bagmati River Bank (Patan Side)",
@@ -591,7 +582,6 @@
       "category": "rivers"
   },
 
-  // Category: temple
   {
       "location": "Patan, Lalitpur",
       "name": "Banglamukhi Temple",
@@ -663,7 +653,6 @@
       "category": "temple"
   },
 
-  // Category: waterfalls
   {
       "location": "Patan, Lalitpur",
       "name": "Chapagaun Seasonal Falls",
