@@ -75,6 +75,7 @@ class TokenData(BaseModel):
 
 
 class DestinationFilter(BaseModel):
+    name: Optional[str] = None
     location: Optional[str] = None
     category: Optional[List[str]] = None
     moods: Optional[List[str]] = None

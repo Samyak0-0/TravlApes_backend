@@ -39,6 +39,8 @@ def create_destination(dest: DestinationCreate):
 @router.post("/search")
 def search_destinations(filters: DestinationFilter):
     query = {}
+    if filters.name:
+        query["name"] = filters.name
 
     if filters.location:
         query["location"] = filters.location
