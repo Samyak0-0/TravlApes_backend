@@ -1,11 +1,12 @@
-from typing import List, Optional
-import json
-from pydantic import BaseModel, Field, conlist
 from enum import Enum
+from typing import List, Optional
+
+from pydantic import BaseModel
 
 # "food", "entertainment", "culture", "peaceful", "adventurous", "nature"
 # "sunny", "rainy", "cloudy"
 # "summer", "winter", "autumn"
+
 
 class Mood(str, Enum):
     food = "food"
@@ -15,15 +16,18 @@ class Mood(str, Enum):
     adventurous = "adventurous"
     nature = "nature"
 
+
 class Weather(str, Enum):
     sunny = "sunny"
     rainy = "rainy"
     cloudy = "cloudy"
 
+
 class Season(str, Enum):
     summer = "summer"
     winter = "winter"
     autumn = "autumn"
+
 
 class Category(str, Enum):
     restaurant = "restaurant"
@@ -38,10 +42,12 @@ class Category(str, Enum):
     temple = "temple"
     other = "other"
 
+
 class UserCreate(BaseModel):
     username: str
     email: str
     password: str
+
 
 class DestinationCreate(BaseModel):
     id: int
@@ -58,9 +64,17 @@ class DestinationCreate(BaseModel):
     suitable_weather: List[Weather]
     compatable_moods: List[Mood]
 
+
 class Token(BaseModel):
     access_token: str
     token_type: str
 
+
 class TokenData(BaseModel):
     username: Optional[str] = None
+
+
+class DestinationFilter(BaseModel):
+    location: Optional[str] = None
+    category: Optional[List[str]] = None
+    moods: Optional[List[str]] = None
