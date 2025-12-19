@@ -1,0 +1,60 @@
+o i want the json in this format 
+
+"bus_stop":[
+    {
+        "name":
+        "latitude":
+        "longitude":
+    }
+],
+"restraunts":[
+    {
+        "name":
+        "latitude":
+        "longitude":
+    }
+],
+"accomodations": [
+{
+    "hotel":[
+    {
+        "name":
+        "latitude":
+        "longitude":
+    }
+    ]
+},
+{
+    "lodge": [{
+        "name":
+        "latitude":
+        "longitude":
+    }],
+    ... similar
+}
+]
+"attractions":[
+{
+    "art_gallery":{
+        "name":
+        "latitude":
+        "longitude":    
+    }
+    "heritage":..
+    "zoo":
+    clubs:
+    temples
+    ponds:...
+}
+"nature":[
+"peaks":[{
+        "name":
+        "latitude":
+        "longitude":
+},...]
+"lakes":
+"rivers":
+"views":
+....
+]
+]
