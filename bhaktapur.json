@@ -1,0 +1,819 @@
+[
+	{
+		"location": "Bhaktapur",
+		"name": "Bhaktapur Durbar Square",
+		"description": "A UNESCO World Heritage Site featuring ancient palaces, temples, and traditional Newari architecture.",
+		"category": "heritage",
+		"avg_price": 1800,
+		"rating": "4.7",
+		"open_hours": "8:00 - 18:00",
+		"latitude": "27.6710",
+		"longitude": "85.4298",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Nyatapola Temple",
+		"description": "A five-story pagoda-style temple and one of the tallest temples in Nepal.",
+		"category": "heritage",
+		"avg_price": 0,
+		"rating": "4.8",
+		"open_hours": "6:00 - 19:00",
+		"latitude": "27.6703",
+		"longitude": "85.4291",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Pottery Square",
+		"description": "A traditional square where artisans create pottery using age-old techniques.",
+		"category": "heritage",
+		"avg_price": 0,
+		"rating": "4.5",
+		"open_hours": "9:00 - 17:00",
+		"latitude": "27.6694",
+		"longitude": "85.4290",
+		"suitable_season": [
+			"summer",
+			"autumn"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Changu Narayan Temple",
+		"description": "One of the oldest Hindu temples in Nepal dedicated to Lord Vishnu.",
+		"category": "temple",
+		"avg_price": 400,
+		"rating": "4.6",
+		"open_hours": "7:00 - 18:00",
+		"latitude": "27.7167",
+		"longitude": "85.4278",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"cultural",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Dattatreya Temple",
+		"description": "A historic temple located in a quiet traditional square of Bhaktapur.",
+		"category": "temple",
+		"avg_price": 0,
+		"rating": "4.4",
+		"open_hours": "8:00 - 18:00",
+		"latitude": "27.6732",
+		"longitude": "85.4314",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Nagarkot View Tower",
+		"description": "A popular viewpoint offering panoramic Himalayan views, especially during sunrise and sunset.",
+		"category": "peaks",
+		"avg_price": 100,
+		"rating": "4.6",
+		"open_hours": "5:00 - 19:00",
+		"latitude": "27.7156",
+		"longitude": "85.5200",
+		"suitable_season": [
+			"autumn",
+			"winter",
+			"summer"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"nature",
+			"adventures"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Suryabinayak Hill Viewpoint",
+		"description": "A peaceful hilltop viewpoint overlooking Bhaktapur valley.",
+		"category": "park",
+		"avg_price": 0,
+		"rating": "4.4",
+		"open_hours": "6:00 - 18:00",
+		"latitude": "27.6509",
+		"longitude": "85.4419",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"nature",
+			"adventures"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "National Art Museum",
+		"description": "A museum showcasing traditional Nepali paintings, manuscripts, and artworks.",
+		"category": "heritage",
+		"avg_price": 500,
+		"rating": "4.5",
+		"open_hours": "10:00 - 17:00",
+		"latitude": "27.6713",
+		"longitude": "85.4299",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Woodcarving Museum",
+		"description": "A museum dedicated to traditional Newari woodcarving arts.",
+		"category": "heritage",
+		"avg_price": 500,
+		"rating": "4.3",
+		"open_hours": "10:00 - 17:00",
+		"latitude": "27.6720",
+		"longitude": "85.4305",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Brass and Bronze Museum",
+		"description": "A museum displaying traditional bronze statues and metal crafts.",
+		"category": "heritage",
+		"avg_price": 500,
+		"rating": "4.2",
+		"open_hours": "10:00 - 17:00",
+		"latitude": "27.6718",
+		"longitude": "85.4302",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Cafe Nyatapola",
+		"description": "A rooftop cafe offering local and continental food with a clear view of Nyatapola Temple.",
+		"category": "restaurant",
+		"avg_price": 600,
+		"rating": "4.5",
+		"open_hours": "8:00 - 21:00",
+		"latitude": "27.6704",
+		"longitude": "85.4292",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment",
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Newa Lahana",
+		"description": "A popular restaurant serving authentic Newari cuisine in a traditional setting.",
+		"category": "restaurant",
+		"avg_price": 800,
+		"rating": "4.6",
+		"open_hours": "11:00 - 22:00",
+		"latitude": "27.6715",
+		"longitude": "85.4296",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Beans The Coffee Shop",
+		"description": "A quiet cafe known for fresh coffee, light meals, and a relaxed artistic atmosphere.",
+		"category": "restaurant",
+		"avg_price": 500,
+		"rating": "4.4",
+		"open_hours": "8:00 - 20:00",
+		"latitude": "27.6696",
+		"longitude": "85.4293",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"summer"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Black Olive Restaurant",
+		"description": "A well-known restaurant offering Nepali, Italian, and continental dishes with rooftop seating.",
+		"category": [
+			"restaurant"
+		],
+		"avg_price": 900,
+		"rating": "4.5",
+		"open_hours": "9:00 - 22:00",
+		"latitude": "27.6701",
+		"longitude": "85.4290",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment",
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Daily Grind Coffee",
+		"description": "A cozy cafe serving specialty coffee and breakfast items near Dattatreya Square.",
+		"category": "restaurant",
+		"avg_price": 450,
+		"rating": "4.3",
+		"open_hours": "7:00 - 19:00",
+		"latitude": "27.6730",
+		"longitude": "85.4312",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"summer"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment",
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "King’s Kitchen",
+		"description": "A relaxed restaurant serving Nepali, Indian, and continental dishes popular among tourists.",
+		"category": "restaurant",
+		"avg_price": 700,
+		"rating": "4.4",
+		"open_hours": "9:00 - 21:00",
+		"latitude": "27.6712",
+		"longitude": "85.4297",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment",
+			"cultural"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Marco Polo Restaurant",
+		"description": "A cozy restaurant offering Italian, Nepali, and vegetarian-friendly meals.",
+		"category": "restaurant",
+		"avg_price": 850,
+		"rating": "4.5",
+		"open_hours": "10:00 - 22:00",
+		"latitude": "27.6706",
+		"longitude": "85.4294",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "The 99 Restro & Bar",
+		"description": "A casual restaurant offering local snacks, coffee, and light meals with outdoor seating.",
+		"category": "restaurant",
+		"avg_price": 650,
+		"rating": "4.3",
+		"open_hours": "9:00 - 22:00",
+		"latitude": "27.6698",
+		"longitude": "85.4291",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Heritage Garden Restaurant",
+		"description": "A peaceful garden restaurant serving traditional Nepali food in a cultural setting.",
+		"category": "restaurant",
+		"avg_price": 750,
+		"rating": "4.4",
+		"open_hours": "10:00 - 21:00",
+		"latitude": "27.6731",
+		"longitude": "85.4316",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"food",
+			"cultural",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Community at The Nanee",
+		"description": "A boutique cafe offering specialty coffee, brunch, and baked items in a calm environment.",
+		"category": "restaurant",
+		"avg_price": 600,
+		"rating": "4.6",
+		"open_hours": "8:00 - 20:00",
+		"latitude": "27.6589",
+		"longitude": "85.4378",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"summer"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"food",
+			"entertainment",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Manju Baha Hotel",
+		"description": "Highly rated hotel combining local charm with excellent service and comfort.",
+		"category": "accomodations",
+		"avg_price": 2400,
+		"rating": "4.7",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6716",
+		"longitude": "85.4292",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Taleju Grand Hotel",
+		"description": "Well-liked hotel with excellent reviews, located near Bhaktapur Durbar Square.",
+		"category": "accomodations",
+		"avg_price": 1800,
+		"rating": "4.7",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6719",
+		"longitude": "85.4304",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "New Shiva Guest House",
+		"description": "Popular guest house with friendly service and consistently positive reviews.",
+		"category": "accomodations",
+		"avg_price": 1500,
+		"rating": "4.7",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6734",
+		"longitude": "85.4311",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"entertainment",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Planet Bhaktapur Hotel",
+		"description": "Comfortable hotel with strong guest ratings and modern amenities.",
+		"category": "accomodations",
+		"avg_price": 2200,
+		"rating": "4.7",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6699",
+		"longitude": "85.4287",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Hotel Garuda",
+		"description": "Well-reviewed hotel with a convenient location near Taumadhi Square.",
+		"category": "accomodations",
+		"avg_price": 1800,
+		"rating": "4.6",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6705",
+		"longitude": "85.4296",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Hotel Layaku Durbar",
+		"description": "Popular hotel close to Durbar Square, known for comfort and affordability.",
+		"category": "accomodations",
+		"avg_price": 1000,
+		"rating": "4.4",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6728",
+		"longitude": "85.4308",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Hotel Heritage Malla",
+		"description": "Heritage-style hotel appreciated for its atmosphere and service.",
+		"category": "accomodations",
+		"avg_price": 1600,
+		"rating": "4.4",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6708",
+		"longitude": "85.4289",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Fortune Resort & Wellness Spa",
+		"description": "Resort-style accommodation offering wellness facilities and scenic surroundings.",
+		"category": "accomodations",
+		"avg_price": 3500,
+		"rating": "4.4",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6604",
+		"longitude": "85.4547",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"nature",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "MILLA Guesthouse",
+		"description": "Top-rated guesthouse with an intimate atmosphere and excellent hospitality.",
+		"category": "accomodations",
+		"avg_price": 3000,
+		"rating": "5.0",
+		"open_hours": "0:00 - 24:00",
+		"latitude": "27.6687",
+		"longitude": "85.4279",
+		"suitable_season": [
+			"spring",
+			"summer",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"cultural",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Siddha Pokhari",
+		"description": "A large historic pond in Bhaktapur also known as Indra Daha, popular for walks and local gatherings.",
+		"category": "lakes",
+		"avg_price": 0,
+		"rating": "4.5",
+		"open_hours": "6:00 - 18:00",
+		"latitude": "27.6769",
+		"longitude": "85.4276",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"nature",
+			"cultural",
+			"entertainment"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Bhajya Pukhu",
+		"description": "A traditional pond surrounded by temples and local neighborhoods, reflecting Newari heritage.",
+		"category": "lakes",
+		"avg_price": 0,
+		"rating": "4.3",
+		"open_hours": "6:00 - 18:00",
+		"latitude": "27.6726",
+		"longitude": "85.4321",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"cultural",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Kamal Pokhari",
+		"description": "A small pond area known locally for calm surroundings and greenery within Bhaktapur.",
+		"category": "lakes",
+		"avg_price": 0,
+		"rating": "4.1",
+		"open_hours": "6:00 - 18:00",
+		"latitude": "27.6658",
+		"longitude": "85.4329",
+		"suitable_season": [
+			"spring",
+			"autumn"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Rani Jhula",
+		"description": "A hanging bridge near Nagarkot surrounded by forest trails and valley views.",
+		"category": "other",
+		"avg_price": 0,
+		"rating": "4.3",
+		"open_hours": "7:00 - 17:00",
+		"latitude": "27.7181",
+		"longitude": "85.5219",
+		"suitable_season": [
+			"spring",
+			"autumn",
+			"winter"
+		],
+		"suitable_weater": [
+			"sunny"
+		],
+		"compatable_moods": [
+			"adventures",
+			"nature"
+		]
+	},
+	{
+		"location": "Bhaktapur",
+		"name": "Tudi Jharana",
+		"description": "A seasonal waterfall near Nagarkot that becomes active during monsoon and after heavy rainfall.",
+		"category": "waterfalls",
+		"avg_price": 0,
+		"rating": "4.4",
+		"open_hours": "6:00 - 18:00",
+		"latitude": "27.7094",
+		"longitude": "85.5331",
+		"suitable_season": [
+			"summer",
+			"autumn"
+		],
+		"suitable_weater": [
+			"sunny",
+			"rainy"
+		],
+		"compatable_moods": [
+			"nature",
+			"adventures"
+		]
+	}
+]
