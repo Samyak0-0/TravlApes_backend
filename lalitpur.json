@@ -1,7 +1,7 @@
 [
   // Category: accomodations
   {
-      "location": "Lalitpur, Nepal",
+      "location": "Patan, Lalitpur",
       "name": "Hotel Himalaya",
       "description": "A well-known hotel offering modern amenities, gardens, and easy access to Patan and Kathmandu city centers.",
       "avg_price": 7500,
@@ -15,7 +15,7 @@
       "category": "accomodations"
   },
   {
-      "location": "Lalitpur, Nepal",
+      "location": "Patan, Lalitpur",
       "name": "Hotel Timila",
       "description": "A highly rated traditional-style hotel in the heart of Patan known for hospitality and comfort.",
       "avg_price": 4500,
@@ -29,7 +29,7 @@
       "category": "accomodations"
   },
   {
-      "location": "Lalitpur, Nepal",
+      "location": "Patan, Lalitpur",
       "name": "Tajaa Pha The Heritage Home",
       "description": "A cozy heritage home-style hotel offering an authentic Patan living experience.",
       "avg_price": 4000,
@@ -43,7 +43,7 @@
       "category": "accomodations"
   },
   {
-      "location": "Lalitpur, Nepal",
+      "location": "Patan, Lalitpur",
       "name": "The Inn Patan",
       "description": "A popular boutique hotel in Patan offering comfortable rooms and close proximity to Patan Durbar Square.",
       "avg_price": 5000,
@@ -57,7 +57,7 @@
       "category": "accomodations"
   },
   {
-      "location": "Lalitpur, Nepal",
+      "location": "Patan, Lalitpur",
       "name": "Traditional Stay - A Boutique Hotel",
       "description": "A heritage boutique hotel featuring traditional Newari architecture and a calm, artistic environment.",
       "avg_price": 6000,
