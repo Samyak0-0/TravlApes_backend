@@ -1,15 +1,11 @@
-from typing import Union
+#!/usr/bin/env python
 
-from fastapi import FastAPI
+# the shebang only works if you are already in the uv's venv
+# the easiest way to open up the venv is to just run 'uv run main.py' once
+# then you can use the shebang on that terminal session
 
-app = FastAPI()
+import uvicorn
 
+if __name__ == "__main__":
+    uvicorn.run("src.server:app", host="0.0.0.0", port=8000, reload=True)
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
