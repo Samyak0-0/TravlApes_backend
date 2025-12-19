@@ -1,0 +1,15 @@
+# Use the official OSRM backend image as base
+FROM osrm/osrm-backend:latest
+
+# Set working directory inside container
+WORKDIR /data
+
+# Copy your OSM file into the container
+COPY /data/nepal-latest.osm.pbf /data/
+
+# Run extraction and preparation once during build
+RUN osrm-extract -p /opt/car.lua /data/nepal-latest.osm.pbf && \
+      osrm-contract /data/nepal-latest.osrm
+
+# Default command: start OSRM server
+CMD ["osrm-routed", "/data/nepal-latest.osrm"]
