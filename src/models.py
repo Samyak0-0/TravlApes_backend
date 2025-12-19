@@ -3,6 +3,10 @@ import json
 from pydantic import BaseModel, Field, conlist
 from enum import Enum
 
+# "food", "entertainment", "culture", "peaceful", "adventurous", "nature"
+# "sunny", "rainy", "cloudy"
+# "summer", "winter", "autumn"
+
 class Mood(str, Enum):
     food = "food"
     entertainment = "entertainment"
@@ -21,6 +25,19 @@ class Season(str, Enum):
     winter = "winter"
     autumn = "autumn"
 
+class Category(str, Enum):
+    restaurant = "restaurant"
+    accomodations = "accomodations"
+    peaks = "peaks"
+    lakes = "lakes"
+    rivers = "rivers"
+    waterfalls = "waterfalls"
+    picnic_site = "picnic_site"
+    heritage = "heritage"
+    park = "park"
+    temple = "temple"
+    other = "other"
+
 class UserCreate(BaseModel):
     username: str
     email: str
@@ -31,7 +48,8 @@ class DestinationCreate(BaseModel):
     location: str
     name: str
     description: str
-    avg_price: str
+    category: Category
+    avg_price: float
     rating: float
     open_hours: str
     latitude: float
