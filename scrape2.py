@@ -156,7 +156,7 @@ def get_accommodations(bbox):
     print("Fetching accommodations...")
     data = fetch_overpass_data(query)
     if not data:
-        return []
+        return {"hotel": [], "lodge": [], "hostel": []}
 
     hotels = []
     lodges = []
@@ -187,7 +187,7 @@ def get_accommodations(bbox):
         elif tourism_type == "hostel":
             hostels.append(place)
 
-    return [{"hotel": hotels}, {"lodge": lodges}, {"hostel": hostels}]
+    return {"hotel": hotels, "lodge": lodges, "hostel": hostels}
 
 
 def get_attractions(bbox):
@@ -223,7 +223,15 @@ def get_attractions(bbox):
     print("Fetching attractions...")
     data = fetch_overpass_data(query)
     if not data:
-        return []
+        return {
+            "art_gallery": [],
+            "museum": [],
+            "heritage": [],
+            "zoo": [],
+            "clubs": [],
+            "temples": [],
+            "ponds": [],
+        }
 
     art_gallery = []
     museum = []
@@ -232,7 +240,6 @@ def get_attractions(bbox):
     clubs = []
     temples = []
     ponds = []
-    attractions = []
 
     for element in data.get("elements", []):
         tags = element.get("tags", {})
@@ -254,8 +261,6 @@ def get_attractions(bbox):
             art_gallery.append(place)
         elif tags.get("tourism") == "museum":
             museum.append(place)
-        elif tags.get("tourism") == "attraction":
-            attractions.append(place)
         elif tags.get("historic"):
             heritage.append(place)
         elif tags.get("tourism") == "zoo":
@@ -267,16 +272,15 @@ def get_attractions(bbox):
         elif tags.get("natural") == "water" and tags.get("water") == "pond":
             ponds.append(place)
 
-    return [
-        {"art_gallery": art_gallery},
-        {"museum": museum},
-        {"attractions": attractions},
-        {"heritage": heritage},
-        {"zoo": zoo},
-        {"clubs": clubs},
-        {"temples": temples},
-        {"ponds": ponds},
-    ]
+    return {
+        "art_gallery": art_gallery,
+        "museum": museum,
+        "heritage": heritage,
+        "zoo": zoo,
+        "clubs": clubs,
+        "temples": temples,
+        "ponds": ponds,
+    }
 
 
 def get_nature(bbox):
@@ -296,7 +300,7 @@ def get_nature(bbox):
     print("Fetching nature places...")
     data = fetch_overpass_data(query)
     if not data:
-        return []
+        return {"peaks": [], "lakes": [], "rivers": [], "views": []}
 
     peaks = []
     lakes = []
@@ -328,7 +332,7 @@ def get_nature(bbox):
         elif tags.get("tourism") == "viewpoint":
             views.append(place)
 
-    return [{"peaks": peaks}, {"lakes": lakes}, {"rivers": rivers}, {"views": views}]
+    return {"peaks": peaks, "lakes": lakes, "rivers": rivers, "views": views}
 
 
 def main():
@@ -348,21 +352,17 @@ def main():
     accommodations = get_accommodations(bbox)
     time.sleep(1)
 
-    attractions = get_attractions(bbox)
+    structures = get_attractions(bbox)
     time.sleep(1)
 
     nature = get_nature(bbox)
 
-    # Build final structure
+    # Build final structure in the clean format
     final_data = {
         "bus_stop": bus_stops,
-        "restaurants": food_data["restaurants"],
-        "cafes": food_data["cafes"],
-        "bars": food_data["bars"],
-        "bakeries": food_data["bakeries"],
+        "food": food_data,
         "accommodations": accommodations,
-        "attractions": attractions,
-        "nature": nature,
+        "attractions": {"structures": structures, "nature": nature},
     }
 
     # Save to file
@@ -373,22 +373,31 @@ def main():
     print("SUMMARY")
     print("=" * 60)
     print(f"Bus Stops: {len(bus_stops)}")
-    print(f"Restaurants: {len(food_data['restaurants'])}")
-    print(f"Cafes: {len(food_data['cafes'])}")
-    print(f"Bars: {len(food_data['bars'])}")
-    print(f"Bakeries: {len(food_data['bakeries'])}")
+    print("\nFood:")
+    print(f"  Restaurants: {len(food_data['restaurants'])}")
+    print(f"  Cafes: {len(food_data['cafes'])}")
+    print(f"  Bars: {len(food_data['bars'])}")
+    print(f"  Bakeries: {len(food_data['bakeries'])}")
 
-    for acc in accommodations:
-        for key, value in acc.items():
-            print(f"{key.capitalize()}: {len(value)}")
+    print("\nAccommodations:")
+    print(f"  Hotels: {len(accommodations['hotel'])}")
+    print(f"  Lodges: {len(accommodations['lodge'])}")
+    print(f"  Hostels: {len(accommodations['hostel'])}")
 
-    for attr in attractions:
-        for key, value in attr.items():
-            print(f"{key.replace('_', ' ').capitalize()}: {len(value)}")
+    print("\nAttractions - Structures:")
+    print(f"  Art Galleries: {len(structures['art_gallery'])}")
+    print(f"  Museums: {len(structures['museum'])}")
+    print(f"  Heritage Sites: {len(structures['heritage'])}")
+    print(f"  Zoos: {len(structures['zoo'])}")
+    print(f"  Clubs: {len(structures['clubs'])}")
+    print(f"  Temples: {len(structures['temples'])}")
+    print(f"  Ponds: {len(structures['ponds'])}")
 
-    for nat in nature:
-        for key, value in nat.items():
-            print(f"{key.capitalize()}: {len(value)}")
+    print("\nAttractions - Nature:")
+    print(f"  Peaks: {len(nature['peaks'])}")
+    print(f"  Lakes: {len(nature['lakes'])}")
+    print(f"  Rivers: {len(nature['rivers'])}")
+    print(f"  Viewpoints: {len(nature['views'])}")
 
     print("\nData saved to kathmandu_pois.json")
     print("All unnamed places have been filtered out!")
@@ -397,4 +406,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
