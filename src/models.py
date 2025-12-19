@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -20,3 +20,10 @@ class DestinationCreate(BaseModel):
     description: str
     latitude: float | None = None
     longitude: float | None = None
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+    
+class TokenData(BaseModel):
+    username: Optional[str] = None
