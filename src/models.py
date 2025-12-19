@@ -11,10 +11,12 @@ class UserCreate(BaseModel):
 
 class DestinationCreate(BaseModel):
     id: int
-    place: str
-    location: str
+    place: str | None = None
+    location: str | None = None
     category: str
-    Name: str
-    hours: str 
+    name: str
+    hours: str
     price: str
-    descripiton: str
+    description: str
+    latitude: float | None = None
+    longitude: float | None = None
