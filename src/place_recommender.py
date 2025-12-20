@@ -1,8 +1,10 @@
 import json
 import math
-from src.models import *
-from datetime import datetime
+from models import *
+from datetime import datetime, timedelta
+from weather_and_season import *
 
+"""
 # TODO: Make sure that each attraction have atleast 2/3 secondary attraction, food, accomodation
 
 with open("kathmandu.json", "r") as f:
@@ -14,6 +16,7 @@ from_date = "2025-12-20"
 to_date = "2025-12-25"
 moods = [ Mood.entertainment ]
 budget = 10000
+"""
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -63,7 +66,9 @@ def generate_recommendations(
   moods: List[Mood],
   budget: float
 ):
-  trip_days = (datetime.fromisoformat(to_date) - datetime.fromisoformat(from_date)).days + 1
+  start_date = datetime.fromisoformat(from_date)
+  end_date = datetime.fromisoformat(to_date)
+  trip_days = (end_date - start_date).days + 1
 
   primary_attractions = []
   secondary_attractions = []
@@ -221,6 +226,11 @@ def generate_recommendations(
       budget -= place["avg_price"]
       recommended_secondary_attractions += 1
 
+  primary_attractions = [p for _, p in primary_attractions];
+  secondary_attractions = [p for _, p in secondary_attractions];
+  food_places = [p for _, p in food_places];
+  accomodations = [p for _, p in accomodations];
+
   return {
       "primary": { "data": primary_attractions, "recommended": recommended_primary_attractions },
       "secondary": { "data": secondary_attractions, "recommended": recommended_secondary_attractions },
@@ -229,36 +239,124 @@ def generate_recommendations(
   }
 
 
-places = generate_recommendations(data, from_date, to_date, moods, budget)
+def distribute_places_into_days(
+  primary_attractions: List[DestinationCreate],
+  secondary_attractions: List[DestinationCreate],
+  food_places: List[DestinationCreate],
+  accomodations: List[DestinationCreate],
+  from_date: str,
+  to_date: str,
+):
+  start_date = datetime.fromisoformat(from_date)
+  end_date = datetime.fromisoformat(to_date)
+  trip_days = (end_date - start_date).days + 1
 
-print("="*20)
-print("Primary Attractions")
-print("="*20)
-for i, data in enumerate(places["primary"]["data"]):
-  print(json.dumps(data, indent=2))
-  if i >= places["primary"]["recommended"]:
-    break
+  # prepare empty days
+  trip_places_per_day = {
+      i+1: {
+        "primary_attraction": [],
+        "secondary_attraction": [],
+        "food_places": food_places,
+        "accomodations": accomodations,
+      }
+      for i in range(trip_days)
+  }
 
-print("="*20)
-print("Secondary Attractions")
-print("="*20)
-for i, data in enumerate(places["secondary"]["data"]):
-  print(json.dumps(data, indent=2))
-  if i >= places["secondary"]["recommended"]:
-    break
+  print(trip_places_per_day)
 
-print("="*20)
-print("Foods")
-print("="*20)
-for i, data in enumerate(places["food"]["data"]):
-  print(json.dumps(data, indent=2))
-  if i >= places["food"]["recommended"]:
-    break
+  # Filter using season and weather
+  season_in_trip = []
+  weather_in_trip = []
 
-print("="*20)
-print("Accomodations")
-print("="*20)
-for i, data in enumerate(places["accomodations"]["data"]):
-  print(json.dumps(data, indent=2))
-  if i >= places["accomodations"]["recommended"]:
-    break
+  current = start_date
+  while current <= end_date:
+    date_str = current.date().strftime("%Y-%m-%d")
+
+    # Get each day season
+    season_in_trip.append(get_season(date_str))
+
+    # Get weather for each day for each data points
+    for place in primary_attractions:
+      key = f'{place["latitude"]},{place["longitude"]}'
+      weather = get_weather_for_date(place["latitude"], place["longitude"], date_str)
+      weather_in_trip.append(weather)
+      break
+
+    current += timedelta(days=1)
+
+  # Step counter
+  day = 0
+  place_step = 0
+  place_cnt = 0
+
+  # Append primary attrations
+  while place_cnt < len(primary_attractions):
+    place_step += 1
+
+    place = primary_attractions[place_cnt]
+    if season_in_trip[day] in place["suitable_season"]:
+      if weather_in_trip[day] in place["suitable_weather"]:
+        trip_places_per_day[day+1]["primary_attraction"].append(place)
+        place_cnt += 1
+        place_step = 0
+
+    day += 1
+
+    if place_step >= trip_days:
+      place_cnt += 1
+
+    if day >= trip_days:
+      day = 0
+
+  # Append primary attrations
+  while place_cnt < len(secondary_attractions):
+    place_step += 1
+
+    place = secondary_attractions[place_cnt]
+    if season_in_trip[day] in place["suitable_season"]:
+      if weather_in_trip[day] in place["suitable_weather"]:
+        trip_places_per_day[day+1]["secondary_attraction"].append(place)
+        place_cnt += 1
+        place_step = 0
+
+    day += 1
+
+    if place_step >= trip_days:
+      place_cnt += 1
+
+    if day >= trip_days:
+      day = 0
+
+  return trip_places_per_day
+
+
+
+# places = generate_recommendations(data, from_date, to_date, moods, budget)
+# 
+# primary = []
+# for i, data in enumerate(places["primary"]["data"]):
+#   primary.append(data)
+#   if i >= places["primary"]["recommended"]:
+#     break
+# 
+# secondary = []
+# for i, data in enumerate(places["secondary"]["data"]):
+#   secondary.append(data)
+#   if i >= places["secondary"]["recommended"]:
+#     break
+# 
+# food = []
+# for i, data in enumerate(places["food"]["data"]):
+#   food.append(data)
+#   if i >= places["food"]["recommended"]:
+#     break
+# 
+# accomodations = []
+# for i, data in enumerate(places["accomodations"]["data"]):
+#   accomodations.append(data)
+#   if i >= places["accomodations"]["recommended"]:
+#     break
+# 
+# 
+# distribute_places_into_days(primary, secondary, food, accomodations, from_date, to_date)
+

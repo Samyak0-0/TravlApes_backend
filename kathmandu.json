@@ -1061,7 +1061,7 @@
     "latitude": 27.7078,
     "longitude": 85.3178,
     "suitable_season": ["summer", "winter", "autumn"],
-    "suitable_weather": ["sunny", "cloudy"],
+    "suitable_weather": [],
     "compatable_moods": ["peaceful", "entertainment", "cultural"]
   },
   {
