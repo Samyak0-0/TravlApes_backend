@@ -6,16 +6,6 @@ from .weather_and_season import *
 
 # TODO: Make sure that each attraction have atleast 2/3 secondary attraction, food, accomodation
 
-# with open("kathmandu.json", "r") as f:
-#   data = json.load(f)
-# 
-# # Inputs
-# location = "Kathmandu"
-# from_date = "2025-12-20"
-# to_date = "2025-12-25"
-# moods = [ Mood.cultural ]
-# budget = 10000
-
 
 def haversine(lat1, lon1, lat2, lon2):
   R = 6371  # Earth radius in km
@@ -327,7 +317,18 @@ def distribute_places_into_days(
 
 
 
+# with open("kathmandu.json", "r") as f:
+#   data = json.load(f)
+# 
+# # Inputs
+# location = "Kathmandu"
+# from_date = "2025-12-20"
+# to_date = "2025-12-25"
+# moods = [ Mood.cultural ]
+# budget = 1000
+# 
 # places = generate_recommendations(data, from_date, to_date, moods, budget)
+# print(json.dumps(places, indent=2))
 # 
 # primary = []
 # for i, data in enumerate(places["primary"]["data"]):
@@ -355,5 +356,5 @@ def distribute_places_into_days(
 # 
 # 
 # trip_days = distribute_places_into_days(primary, secondary, food, accomodations, from_date, to_date)
-# print(json.dumps(trip_days, indent=2))
+# # print(json.dumps(trip_days, indent=2))
 # 

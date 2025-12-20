@@ -144,12 +144,10 @@ MOOD_COMPLEMENTARY = {
     ],
 
     Mood.entertainment: [
-        Mood.food,
         Mood.adventurous,
     ],
 
     Mood.cultural: [
-        Mood.food,
         Mood.peaceful,
         Mood.nature,
     ],
@@ -157,7 +155,6 @@ MOOD_COMPLEMENTARY = {
     Mood.peaceful: [
         Mood.nature,
         Mood.cultural,
-        Mood.food,
     ],
 
     Mood.adventurous: [
