@@ -1,5 +1,4 @@
 [
-  // Restaurants
   {
     "location": "Kathmandu",
     "name": "OR2K",
@@ -420,9 +419,7 @@
     "suitable_season": ["summer", "winter", "autumn"],
     "suitable_weather": ["sunny", "rainy", "cloudy"],
     "compatable_moods": ["food", "peaceful"]
-  }
-
-  // Accomodations
+  },
   {
     "location": "Kathmandu",
     "name": "Kathmandu Peace Home",
@@ -688,9 +685,7 @@
     "suitable_season": ["summer", "winter", "autumn"],
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["peaceful"]
-  }
-
-  // Rivers
+  },
   {
     "location": "Kathmandu",
     "name": "Bagmati River",
@@ -732,9 +727,7 @@
     "suitable_season": ["summer", "winter", "autumn"],
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["cultural"]
-  }
-
-  // Picnic sites
+  },
   {
     "location": "Kathmandu",
     "name": "Swayambhu Hill Picnic Area",
@@ -791,8 +784,6 @@
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["peaceful", "nature", "cultural"]
   },
-
-  // Heritage
   {
     "location": "Kathmandu",
     "name": "Kathmandu Durbar Square",
@@ -905,8 +896,6 @@
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["cultural"]
   },
-
-  // Museums
   {
     "location": "Kathmandu",
     "name": "National Museum of Nepal",
@@ -991,8 +980,6 @@
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["cultural"]
   },
-
-  // Park
   {
     "location": "Kathmandu",
     "name": "Garden of Dreams",
@@ -1077,8 +1064,6 @@
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["peaceful", "entertainment", "cultural"]
   },
-
-  // Temple
   {
     "location": "Kathmandu",
     "name": "Pashupatinath Temple",
@@ -1190,9 +1175,7 @@
     "suitable_season": ["summer", "winter", "autumn"],
     "suitable_weather": ["sunny", "cloudy"],
     "compatable_moods": ["cultural", "peaceful", "nature"]
-  }
-
-  // Others
+  },
   {
     "location": "Kathmandu",
     "name": "Purple Haze Rock Bar",

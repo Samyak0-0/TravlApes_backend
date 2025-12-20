@@ -64,3 +64,81 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     username: Optional[str] = None
+
+
+
+
+MOOD_TO_CATEGORY = {
+    Mood.food: [
+        Category.restaurant,
+    ],
+
+    Mood.entertainment: [
+        Category.other,
+        Category.park,
+    ],
+
+    Mood.cultural: [
+        Category.heritage,
+        Category.temple,
+    ],
+
+    Mood.peaceful: [
+        Category.park,
+        Category.lakes,
+        Category.temple,
+        Category.rivers,
+        Category.peaks,
+    ],
+
+    Mood.adventurous: [
+        Category.peaks,
+        Category.waterfalls,
+        Category.rivers,
+    ],
+
+    Mood.nature: [
+        Category.park,
+        Category.lakes,
+        Category.rivers,
+        Category.waterfalls,
+        Category.picnic_site,
+    ],
+}
+
+MOOD_COMPLEMENTARY = {
+    Mood.food: [
+        Mood.entertainment,
+        Mood.cultural,
+        Mood.peaceful,
+    ],
+
+    Mood.entertainment: [
+        Mood.food,
+        Mood.adventurous,
+    ],
+
+    Mood.cultural: [
+        Mood.food,
+        Mood.peaceful,
+        Mood.nature,
+    ],
+
+    Mood.peaceful: [
+        Mood.nature,
+        Mood.cultural,
+        Mood.food,
+    ],
+
+    Mood.adventurous: [
+        Mood.entertainment,
+        Mood.nature,
+    ],
+
+    Mood.nature: [
+        Mood.peaceful,
+        Mood.adventurous,
+        Mood.cultural,
+    ],
+}
+
