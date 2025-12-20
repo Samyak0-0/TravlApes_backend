@@ -81,6 +81,22 @@ class TokenData(BaseModel):
     username: Optional[str] = None
 
 
+class RecommendationRequest(BaseModel):
+    location: str
+    from_date: str
+    to_date: str
+    moods: List[Mood]
+    budget: float
+
+
+class FinalizedPlacesRequest(BaseModel):
+    primary_attractions: List[DestinationCreate]
+    secondary_attractions: List[DestinationCreate]
+    food_places: List[DestinationCreate]
+    accomodations: List[DestinationCreate]
+    from_date: str
+    to_date:str
+
 
 MOOD_TO_CATEGORY = {
     Mood.food: [

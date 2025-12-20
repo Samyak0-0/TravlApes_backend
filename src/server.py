@@ -9,6 +9,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from src.routes import dummyroute
 from src.routes import destinationsRoute
 from src.routes import osrmRoute
+from src.routes import recommend
 
 from src.jwttoken import create_access_token
 from src.db import users
@@ -39,6 +40,7 @@ app.add_middleware(
 app.include_router(dummyroute.router)
 app.include_router(destinationsRoute.router)
 app.include_router(osrmRoute.router)
+app.include_router(recommend.router)
 
 # ---------------------------
 # AUTH

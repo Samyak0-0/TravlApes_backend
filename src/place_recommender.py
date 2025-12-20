@@ -1,22 +1,20 @@
 import json
 import math
-from models import *
 from datetime import datetime, timedelta
-from weather_and_season import *
+from .models import *
+from .weather_and_season import *
 
-"""
 # TODO: Make sure that each attraction have atleast 2/3 secondary attraction, food, accomodation
 
-with open("kathmandu.json", "r") as f:
-  data = json.load(f)
-
-# Inputs
-location = "Kathmandu"
-from_date = "2025-12-20"
-to_date = "2025-12-25"
-moods = [ Mood.entertainment ]
-budget = 10000
-"""
+# with open("kathmandu.json", "r") as f:
+#   data = json.load(f)
+# 
+# # Inputs
+# location = "Kathmandu"
+# from_date = "2025-12-20"
+# to_date = "2025-12-25"
+# moods = [ Mood.cultural ]
+# budget = 10000
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -139,7 +137,7 @@ def generate_recommendations(
 
 
   # Collecting accomodations
-  for place in data:
+  for place in places_data:
     if place["category"] != Category.accomodations:
       continue
 
@@ -262,8 +260,6 @@ def distribute_places_into_days(
       for i in range(trip_days)
   }
 
-  print(trip_places_per_day)
-
   # Filter using season and weather
   season_in_trip = []
   weather_in_trip = []
@@ -358,5 +354,6 @@ def distribute_places_into_days(
 #     break
 # 
 # 
-# distribute_places_into_days(primary, secondary, food, accomodations, from_date, to_date)
-
+# trip_days = distribute_places_into_days(primary, secondary, food, accomodations, from_date, to_date)
+# print(json.dumps(trip_days, indent=2))
+# 

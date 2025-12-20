@@ -3,7 +3,7 @@ from datetime import datetime
 
 import requests
 
-from models import Season, Weather
+from .models import Season, Weather
 
 
 def get_season(date_str: str) -> Season:
